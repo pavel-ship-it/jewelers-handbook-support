@@ -7,7 +7,7 @@ alt_url: /ru/privacy
 
 # Privacy Policy
 
-**App:** Jewelers Handbook («Справочник ювелира») for iOS
+**App:** Jewelers Handbook for iOS
 **Developer:** Pavel Yakimenko
 **Contact:** [dreamcomenull@gmail.com](mailto:dreamcomenull@gmail.com)
 **Effective date:** 26 October 2026
