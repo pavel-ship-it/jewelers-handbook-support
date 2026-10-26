@@ -1,0 +1,59 @@
+{%- assign lang = page.lang | default: "en" -%}
+{%- if lang == "ru" -%}{%- assign en_url = page.alt_url -%}{%- assign ru_url = page.url | replace: ".html", "" -%}
+{%- else -%}{%- assign ru_url = page.alt_url -%}{%- assign en_url = page.url | replace: ".html", "" -%}{%- endif -%}
+<!DOCTYPE html>
+<html lang="{{ lang }}">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+{% if lang == "en" %}
+    <script>
+      (function () {
+        try {
+          if (localStorage.getItem('jh_lang')) return;
+          var l = (navigator.languages && navigator.languages[0]) || navigator.language || '';
+          if (/^ru/i.test(l)) location.replace({{ ru_url | relative_url | jsonify }} + location.hash);
+        } catch (e) {}
+      })();
+    </script>
+{% endif %}
+{% seo %}
+    <link rel="alternate" hreflang="en" href="{{ en_url | absolute_url }}">
+    <link rel="alternate" hreflang="ru" href="{{ ru_url | absolute_url }}">
+    <link rel="alternate" hreflang="x-default" href="{{ en_url | absolute_url }}">
+    <link rel="stylesheet" href="{{ "/assets/css/style.css?v=" | append: site.github.build_revision | relative_url }}">
+    <style>.lang-switch{margin:0 0 20px;font-size:14px}.lang-switch strong{color:#222}</style>
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <nav class="lang-switch">
+          {% if lang == "en" %}<strong>English</strong>{% else %}<a href="{{ en_url | relative_url }}" hreflang="en" lang="en" onclick="try{localStorage.setItem('jh_lang','en')}catch(e){}">English</a>{% endif %}
+          |
+          {% if lang == "ru" %}<strong>Русский</strong>{% else %}<a href="{{ ru_url | relative_url }}" hreflang="ru" lang="ru" onclick="try{localStorage.setItem('jh_lang','ru')}catch(e){}">Русский</a>{% endif %}
+        </nav>
+        {% if lang == "ru" %}
+        <h1><a href="{{ "/ru/" | relative_url }}">Справочник ювелира</a></h1>
+        <p>Политика конфиденциальности и поддержка iOS-приложения «Справочник ювелира»</p>
+        {% else %}
+        <h1><a href="{{ "/" | relative_url }}">Jewelers Handbook</a></h1>
+        <p>{{ site.description }}</p>
+        {% endif %}
+      </header>
+      <section>
+
+      {{ content }}
+
+      </section>
+      <footer>
+        {% if lang == "ru" %}
+        <p><small>Размещено на GitHub Pages &mdash; тема <a href="https://github.com/orderedlist">orderedlist</a></small></p>
+        {% else %}
+        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
+        {% endif %}
+      </footer>
+    </div>
+    <script src="{{ "/assets/js/scale.fix.js" | relative_url }}"></script>
+  </body>
+</html>

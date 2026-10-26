@@ -1,14 +1,15 @@
 ---
-title: Справочник ювелира / Jewelers Handbook
+title: Jewelers Handbook
 layout: default
+lang: en
+alt_url: /ru/
 ---
 
-# Справочник ювелира / Jewelers Handbook
+# Jewelers Handbook
 
-Офлайн-справочник для ювелиров для iPhone и iPad.
 An offline reference handbook for jewelers for iPhone and iPad.
 
-- [Политика конфиденциальности / Privacy Policy](privacy)
-- [Поддержка / Support](support)
+- [Privacy Policy]({{ '/privacy' | relative_url }})
+- [Support]({{ '/support' | relative_url }})
 
-Контакт / Contact: [dreamcomenull@gmail.com](mailto:dreamcomenull@gmail.com)
+Contact: [dreamcomenull@gmail.com](mailto:dreamcomenull@gmail.com)
