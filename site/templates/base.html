@@ -78,10 +78,11 @@
         <li><a href="{{ rel(t.support) }}">{{ t.nav_support }}</a></li>
         <li><a href="{{ rel(t.privacy) }}">{{ t.nav_privacy }}</a></li>
         <li><a href="{{ rel(t.terms) }}">{{ t.nav_terms }}</a></li>
+        <li><a href="{{ t.dev_url }}">{{ t.dev_link }}</a></li>
       </ul>
     </nav>
   </div>
-  <p class="wrap copy">© 2026 Pavel Yakimenko · <a href="{{ rel(page.alternates[t.other]) }}" hreflang="{{ t.other }}" lang="{{ t.other }}" data-lang="{{ t.other }}">{{ t.other_name }}</a></p>
+  <p class="wrap copy">© 2026 <a href="{{ t.dev_url }}">Pavel Yakimenko</a> · <a href="{{ rel(page.alternates[t.other]) }}" hreflang="{{ t.other }}" lang="{{ t.other }}" data-lang="{{ t.other }}">{{ t.other_name }}</a></p>
 </footer>
 <script>
 (function(){try{document.querySelectorAll('[data-lang]').forEach(function(a){a.addEventListener('click',function(){localStorage.setItem('jh_lang',a.getAttribute('data-lang'))})})}catch(e){}})();

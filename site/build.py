@@ -42,6 +42,7 @@ T = {
         footer_contact='Questions or ideas?',
         og_alt='Jewelers Handbook: chains, stones, cuts, settings and clasps, calculators and 3D models at actual size',
         badge_apple_small='Download on the', soon_apple='Coming soon to the App Store',
+        dev_url='https://pavel-ship-it.github.io/', dev_link='More apps by Pavel Yakimenko', dev_support='https://pavel-ship-it.github.io/support',
     ),
     'ru': dict(
         locale='ru_RU', locale_alt='en_US', other='en', other_label='English', other_name='English',
@@ -54,6 +55,7 @@ T = {
         footer_contact='Вопросы или идеи?',
         og_alt='Справочник ювелира: цепи, камни, огранки, закрепки и замки, калькуляторы и 3D-модели в реальном размере',
         badge_apple_small='Загрузите в', soon_apple='Скоро в App Store',
+        dev_url='https://pavel-ship-it.github.io/ru/', dev_link='Другие приложения Pavel Yakimenko', dev_support='https://pavel-ship-it.github.io/ru/support',
     ),
 }
 
