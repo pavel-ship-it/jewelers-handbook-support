@@ -1,0 +1,11 @@
+[
+ {"id": "faq-account", "q": "Do I need an account?", "a": "<p>No. There is no sign-up or sign-in. Open the app and start using it right away.</p>"},
+ {"id": "faq-offline", "q": "Does Jewelers Handbook work offline?", "a": "<p>Yes. All catalogs, calculators and 3D models are built into the app. You only need a connection to install or update it from the App Store.</p>"},
+ {"id": "faq-accuracy", "q": "How accurate are the weight and carat results?", "a": "<p>They are estimates. Chain weight depends on the mandrel, the wire and how tightly you work; carat estimates have an error of about ±5–10 %; alloy densities vary. Use a test piece, scales and a gauge before making a piece.</p>"},
+ {"id": "faq-approximate", "q": "What does “approximate” mean on some chains?", "a": "<p>Those chains (Bismarck, rope, curb, Figaro, box) are calculated from published weight-per-centimeter tables rather than from a full geometric model. They are good for a quick estimate; confirm with a test piece.</p>"},
+ {"id": "faq-actual-size", "q": "Actual size looks wrong on my device. What can I do?", "a": "<p>Open <span class=\"ui\">About</span> and use <span class=\"ui\">Calibrate with a card</span>: hold a bank card against the screen and adjust until the frame matches it. The calibration is kept until you reset it.</p>"},
+ {"id": "faq-empty", "q": "Why are some fields empty?", "a": "<p>When there is no reliable source for a value, the field is left empty on purpose instead of showing a guess.</p>"},
+ {"id": "faq-language", "q": "Which languages does the app support?", "a": "<p>English and Russian. The app follows your device language; you can change it for this app only in iOS Settings → Jeweler’s Handbook → Language.</p>"},
+ {"id": "faq-backup", "q": "How do I move my saved pieces to another device?", "a": "<p>In <span class=\"ui\">My pieces</span> tap <span class=\"ui\">Export JSON</span>, send the file to the other device and use <span class=\"ui\">Import JSON</span> there.</p>"},
+ {"id": "faq-ipad", "q": "Does it work on iPad?", "a": "<p>Yes, Jewelers Handbook runs on iPhone and iPad, and actual size is supported on both.</p>"}
+]

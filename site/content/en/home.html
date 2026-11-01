@@ -1,0 +1,107 @@
+{% from 'macros.html' import shot, badges %}
+<section class="hero">
+  <div class="wrap hero-grid">
+    <div>
+      <p class="eyebrow">For iPhone &amp; iPad</p>
+      <h1>A jeweler’s reference and calculators in your pocket</h1>
+      <p class="lead"><strong>Jewelers Handbook</strong> brings chains, gemstones, cuts, settings and clasps together with practical calculators. Work out rings, wire and weight for a chain, see it in 3D at actual size, check a stone’s hardness and treatments, estimate carats or convert a ring size, right at the bench and without internet.</p>
+      <ul class="pills" aria-label="At a glance">
+        <li>Works fully offline</li>
+        <li>3D at actual size</li>
+        <li>No account</li>
+        <li>No data collected</li>
+      </ul>
+      <div class="btns">
+        <a class="btn primary" href="{{ rel('/manual/') }}">Read the manual</a>
+        <a class="btn" href="#features">See features</a>
+      </div>
+      {{ badges(stores, t) }}
+    </div>
+    <div class="hero-shots">
+      {{ shot('princess', lang, shots, eager=True, caption=False) }}
+      {{ shot('byz', lang, shots, eager=True, caption=False) }}
+    </div>
+  </div>
+  <div class="wrap">
+    <div class="helpbar" id="help">
+      <strong>Need help with the app?</strong>
+      <span>Email the developer: <a href="mailto:dreamcomenull@gmail.com">dreamcomenull@gmail.com</a></span>
+      <a href="{{ rel('/support') }}">Support &amp; FAQ</a>
+      <a href="{{ rel('/manual/') }}">User manual</a>
+    </div>
+  </div>
+</section>
+
+<div class="wrap">
+<section class="section narrow" aria-labelledby="about">
+  <h2 id="about">What is Jewelers Handbook?</h2>
+  <p>Jewelers Handbook is an offline reference and calculator kit made by a working chainmaker for jewelers, students and hobbyists. It answers the everyday bench questions: how many rings and how much wire a Byzantine chain needs, how heavy a sheet or ring blank will be, which setting suits a fragile stone, what ring size a customer’s 17 mm means in US or UK sizes.</p>
+  <p>Every number comes from a named source, such as GIA articles, supplier catalogs and standards, and the app lists all of them. Where no reliable source exists, the field is left empty instead of guessed. Calculations of weight, carats and sizes are clearly marked as estimates.</p>
+</section>
+
+<ul class="stats" aria-label="What’s inside">
+  <li><b>8</b><span>chain calculators</span></li>
+  <li><b>32</b><span>gemstones</span></li>
+  <li><b>15</b><span>cuts in 3D</span></li>
+  <li><b>13</b><span>setting types</span></li>
+  <li><b>14</b><span>clasp types in 3D</span></li>
+  <li><b>77</b><span>cited sources</span></li>
+</ul>
+
+<section class="section" aria-labelledby="how">
+  <h2 id="how">How it works</h2>
+  <ol class="steps">
+    <li><strong>Find it.</strong> Open a section from the home screen or type in <span class="ui">Search the handbook</span>. Search understands both English and Russian names.</li>
+    <li><strong>Enter your sizes.</strong> Choose the metal and enter wire, ring or stone dimensions. Results update as you type, with warnings when a chain won’t assemble.</li>
+    <li><strong>Check it at 1:1.</strong> Tap <span class="ui">Actual size</span> to see the model on screen at its real size, then save the calculation to <span class="ui">My pieces</span>.</li>
+  </ol>
+</section>
+
+<section class="section" id="features" aria-labelledby="features-h">
+  <h2 id="features-h">Features</h2>
+  <ul class="cards">
+    <li class="card"><span class="ico" aria-hidden="true">⛓</span><h3>Chain calculators</h3><p>Byzantine, anchor (cable) and Moscow bit: number of rings or links, wire length and chain weight from your sizes, with a check of whether the weave will assemble. Correct the result with a test piece.</p><a class="more" href="{{ rel('/manual/') }}#chains">How the calculators work</a></li>
+    <li class="card"><span class="ico" aria-hidden="true">⚖</span><h3>Approximate chain weight</h3><p>Bismarck, rope, curb, Figaro 3/1 and box chains: weight per centimeter from supplier tables, clearly marked as approximate.</p><a class="more" href="{{ rel('/manual/') }}#chains">About approximate chains</a></li>
+    <li class="card"><span class="ico" aria-hidden="true">◈</span><h3>3D at actual size</h3><p>Rotate and zoom chains, cuts, settings, clasps and rings in 3D. <span class="ui">Actual size</span> shows them 1:1, scaled automatically on known iPhones and iPads.</p><a class="more" href="{{ rel('/manual/') }}#actual-size">Actual size and calibration</a></li>
+    <li class="card"><span class="ico" aria-hidden="true">💎</span><h3>32 gemstones</h3><p>Group, Mohs hardness, refractive index, density, colors, toughness (GIA 1987), common treatments, ultrasonic cleaning and care, each with sources.</p><a class="more" href="{{ rel('/manual/') }}#stones">Stone cards</a></li>
+    <li class="card"><span class="ico" aria-hidden="true">◇</span><h3>15 cuts</h3><p>From round brilliant and princess to rose and cabochon: shape, facets, typical proportions and fragile spots, each with a 3D model.</p><a class="more" href="{{ rel('/manual/') }}#cuts">Cut cards</a></li>
+    <li class="card"><span class="ico" aria-hidden="true">💍</span><h3>Settings and finder</h3><p>13 setting types, from prongs and bezel to pavé and tension. The finder takes a stone and a cut and shows which settings are recommended and which are not.</p><a class="more" href="{{ rel('/manual/') }}#settings">Setting finder</a></li>
+    <li class="card"><span class="ico" aria-hidden="true">🔒</span><h3>14 clasp types</h3><p>Lobster, spring ring, box, toggle and more, with 3D diagrams that open and close, pros and cons, and a clasp finder by the features you need.</p><a class="more" href="{{ rel('/manual/') }}#clasps">Clasps</a></li>
+    <li class="card"><span class="ico" aria-hidden="true">📏</span><h3>Bench tools</h3><p><span class="ui">Size → carat</span> estimates stone weight from dimensions, <span class="ui">Ring size</span> converts EU, RU, US and UK, and <span class="ui">Metal weight</span> covers wire, sheet and ring blanks.</p><a class="more" href="{{ rel('/manual/') }}#tools">Tools</a></li>
+    <li class="card"><span class="ico" aria-hidden="true">★</span><h3>My pieces and favorites</h3><p>Save any calculation with its 3D thumbnail, duplicate it or export to a file. Star the entries you use most.</p><a class="more" href="{{ rel('/manual/') }}#my-pieces">My pieces</a></li>
+  </ul>
+</section>
+
+<section class="section" aria-labelledby="shots">
+  <h2 id="shots">Screenshots</h2>
+  <div class="gallery" tabindex="0" aria-label="Screenshots, scroll sideways">
+    {% for n in shots %}{{ shot(n, lang, shots) }}
+    {% endfor %}
+  </div>
+</section>
+
+<section class="band narrow" aria-labelledby="private">
+  <h2 id="private">Private and offline by design</h2>
+  <ul class="checks">
+    <li>Works fully offline. All catalogs, calculators and 3D models are built into the app.</li>
+    <li>No account, sign-up or sign-in. No ads, analytics or tracking.</li>
+    <li>Your pieces, favorites and settings stay on your device.</li>
+  </ul>
+  <p>Read the <a href="{{ rel('/privacy') }}">Privacy Policy</a>.</p>
+</section>
+
+<section class="section narrow" aria-labelledby="good">
+  <h2 id="good">Good to know</h2>
+  <p><strong>Languages.</strong> The app is available in English and Russian and follows your device language.</p>
+  <p class="note"><strong>Calculations are estimates.</strong> Weight, carat and size results depend on the alloy, tolerances and finishing. Always check against a test piece, scales and a gauge before making a piece.</p>
+</section>
+
+<section class="contact" id="support" aria-labelledby="support-h">
+  <h2 id="support-h">Support and contact</h2>
+  <p>Found a bug, have a question or an idea? Write to me, the developer, at <a href="mailto:dreamcomenull@gmail.com">dreamcomenull@gmail.com</a>. I reply to every message as soon as I can. Please include your device model, iOS version and what happened; a screenshot helps a lot.</p>
+  <div class="btns">
+    <a class="btn" href="{{ rel('/support') }}">Support &amp; FAQ</a>
+    <a class="btn" href="{{ rel('/manual/') }}">User manual</a>
+  </div>
+</section>
+</div>

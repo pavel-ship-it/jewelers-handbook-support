@@ -1,0 +1,158 @@
+{% from 'macros.html' import shot %}
+<div class="wrap">
+<header class="narrow">
+  <h1>Jewelers Handbook user manual</h1>
+  <p class="lead">How to use every section of Jewelers Handbook on iPhone and iPad, step by step. Button and screen names are written <span class="ui">like this</span>, as they appear in the app’s English interface.</p>
+</header>
+<div class="doc-layout">
+<nav class="toc" aria-labelledby="toc-h">
+  <h2 id="toc-h">Contents</h2>
+  <ol>
+    <li><a href="#getting-started">Getting started</a></li>
+    <li><a href="#home">Home screen and search</a></li>
+    <li><a href="#chains">Chains and calculators</a></li>
+    <li><a href="#viewer">3D views</a></li>
+    <li><a href="#actual-size">Actual size and calibration</a></li>
+    <li><a href="#stones">Stones</a></li>
+    <li><a href="#cuts">Cuts</a></li>
+    <li><a href="#settings">Settings and the setting finder</a></li>
+    <li><a href="#clasps">Clasps</a></li>
+    <li><a href="#tools">Tools: carat, ring size, metal weight</a></li>
+    <li><a href="#my-pieces">My pieces and favorites</a></li>
+    <li><a href="#about">Sources, About and appearance</a></li>
+    <li><a href="#language">Language</a></li>
+    <li><a href="#privacy-data">Your data and offline use</a></li>
+    <li><a href="#faq">FAQ</a></li>
+    <li><a href="#help">Still need help?</a></li>
+  </ol>
+</nav>
+<article class="doc">
+
+<h2 id="getting-started">1. Getting started</h2>
+<p>Install Jewelers Handbook from the App Store and open it on your iPhone or iPad. There is nothing to sign up for, and everything works without an internet connection, so the app is just as useful in a workshop with no Wi-Fi.</p>
+<p>The home screen lists all sections. Tap one to open it, and use the usual iOS back gesture or the back button to return.</p>
+
+<h2 id="home">2. Home screen and search</h2>
+<p>Sections are grouped as follows:</p>
+<ul>
+  <li><strong>Reference</strong>: <span class="ui">Chains</span>, <span class="ui">Stones</span>, <span class="ui">Cuts</span>, <span class="ui">Settings</span>, <span class="ui">Clasps</span>.</li>
+  <li><strong>Tools</strong>: <span class="ui">Size → carat</span>, <span class="ui">Ring size</span>, <span class="ui">Metal weight</span>.</li>
+  <li><strong>Personal</strong>: <span class="ui">My pieces</span> (saved calculations) and <span class="ui">Favorites</span>.</li>
+  <li><strong>About</strong>: <span class="ui">Sources</span> and <span class="ui">About</span> (version and settings).</li>
+</ul>
+<p>The <span class="ui">Search the handbook</span> field at the top finds stones, cuts, settings, clasps, chains, tools and your saved pieces. It understands both languages, so you can type a name in English or in Russian.</p>
+
+<h2 id="chains">3. Chains and calculators</h2>
+{{ shot('byz', lang, shots, cls='side-shot') }}
+<p><span class="ui">Chains</span> has two lists: <strong>Calculators</strong> and the <strong>Chain type catalog</strong>, which describes each weave and what it is used for.</p>
+<h3 id="byzantine">Byzantine chain</h3>
+<ol class="how">
+  <li>Choose the <span class="ui">Metal</span>. Its density is filled in for you.</li>
+  <li>Enter the wire diameter and the ring inner diameter (ID). Tap <span class="ui">auto</span> to have the ID suggested from the wire.</li>
+  <li>Enter the total length and the clasp length, and a wire allowance if you want extra.</li>
+  <li>Read the results: weave length, rings per 1 cm, number of rings, wire per ring and in total, ring weight, weave weight, wire to buy with the allowance, chain width and thickness, and the outer ring diameter.</li>
+</ol>
+<p>The ID/d ratio is checked, and you’ll see a warning when it is outside the range where the weave assembles well. <span class="ui">Highlight rings by role</span> colors the rings in the 3D model so you can see how the pattern is built.</p>
+<p><strong>Test piece.</strong> Real chains depend on the mandrel, the springiness of the wire and how tightly you work. Weave a 2–3 cm test piece, count the rings per 1 cm and enter the number in the test piece field: the whole calculation updates.</p>
+<div class="clear"></div>
+<h3 id="anchor">Anchor (cable) chain and Moscow bit</h3>
+<p>The anchor calculator works with oval or round links and lets you set flattening (hammered or pressed links) and diamond-cut links separately. Moscow bit is an anchor chain with small links on every second link; you can choose the metal of the small links. Both calculate links and weight and show the chain in 3D at actual size.</p>
+<h3 id="approximate">Approximate chains</h3>
+<p>Bismarck, rope, curb, Figaro 3/1 and box chains are calculated from published weight tables (grams per centimeter for a given width or wire diameter). They are marked <span class="ui">approximate</span>: use them for a quick estimate and confirm with a test piece.</p>
+
+<h2 id="viewer">4. 3D views</h2>
+{{ shot('bit', lang, shots, cls='side-shot') }}
+<p>Chains, cuts, settings, clasps, rings and the carat tool have a 3D view.</p>
+<ul>
+  <li><strong>Rotate</strong> with one finger, <strong>zoom</strong> with a pinch.</li>
+  <li><span class="ui">Top view</span> turns the model to look straight down; the ⟲ button resets the view.</li>
+  <li><span class="ui">Actual size</span> zooms the model to 1:1 (see the next section).</li>
+</ul>
+<p>Labels on the view say what you are looking at, for example “Illustration: a nominal cut model” or the current scale such as “×1.8 of actual size”. Clasp models open and close with <span class="ui">▶ Open / close</span>. Illustrations are not technical drawings: sizes follow your input, other proportions are nominal.</p>
+<div class="clear"></div>
+
+<h2 id="actual-size">5. Actual size and calibration</h2>
+<p>Tap <span class="ui">Actual size</span> under a 3D view and the model is zoomed so that 1 mm on screen equals 1 mm in reality, with a millimeter ruler along the edge. Hold a stone, ring or chain against the screen to compare. Pinch or tap ⟲ to leave 1:1. The button is shown only where the model is drawn to scale.</p>
+<p>On iPhone and iPad the scale is set <strong>automatically</strong> from the device model, using the screen resolution and pixel density in Apple’s tech specs. If your device is not recognized, the app asks you to calibrate.</p>
+<p><strong>Calibrate with a card</strong> (in <span class="ui">About</span>; the button reads <span class="ui">Refine with a card</span> when the automatic scale is active): hold any bank card against the screen (ISO standard, 85.60 mm wide) and move the slider or tap −/+ until the frame matches the card’s edges. A card calibration takes priority over the automatic scale until you tap <span class="ui">Reset calibration</span>.</p>
+
+<h2 id="stones">6. Stones</h2>
+{{ shot('ruby', lang, shots, cls='side-shot') }}
+<p><span class="ui">Stones</span> lists 32 gemstones and simulants, from diamond, ruby and sapphire to pearl, amber, cubic zirconia and moissanite. Each card shows, where a reliable source exists:</p>
+<ul>
+  <li>group or species, Mohs hardness, refractive index and density (SG);</li>
+  <li>typical colors and toughness after GIA (1987);</li>
+  <li>common treatments with how often they occur;</li>
+  <li>whether ultrasonic cleaning is safe and care notes;</li>
+  <li>a short description and links to the sources.</li>
+</ul>
+<p>Empty fields are left empty on purpose: the handbook never fills in a guessed value.</p>
+<div class="clear"></div>
+
+<h2 id="cuts">7. Cuts</h2>
+{{ shot('princess', lang, shots, cls='side-shot') }}
+<p><span class="ui">Cuts</span> covers 15 cuts: round brilliant, old European, princess, cushion, oval, pear, marquise, emerald, Asscher, radiant, heart, baguette, trillion, cabochon and rose. Each card has a facet diagram, a description, typical proportions, warnings about fragile spots such as sharp corners, sources and a 3D model you can view at actual size.</p>
+<div class="clear"></div>
+
+<h2 id="settings">8. Settings and the setting finder</h2>
+<p><span class="ui">Settings</span> describes 13 setting types: prongs, bezel, half bezel, flush (gypsy), channel, pavé, shared prong, tension, bar, cluster, halo, illusion, and cement or peg and cage for pearls.</p>
+<p>Open <span class="ui">Setting finder (stone + cut)</span>, choose a stone and a cut, and the app shows which settings are <span class="ui">Recommended</span> and which are <span class="ui">Not recommended</span>, together with recommendations and parameters for the setting.</p>
+
+<h2 id="clasps">9. Clasps</h2>
+{{ shot('lobster', lang, shots, cls='side-shot') }}
+<p><span class="ui">Clasps</span> covers 14 types: lobster, spring ring, fold-over, bayonet, barrel, box, slide, bead, magnetic, toggle, hook and eye, slider (bolo), buckle, and safety options (figure-eight safety and safety chain). Each card has a 3D diagram that you can scale to your size and open and close, plus where the clasp is used, its pros and cons, and example weights from supplier listings where available.</p>
+<p>The <span class="ui">Clasp finder</span> lets you tick what matters to you and shows the clasps whose sources confirm those features.</p>
+<div class="clear"></div>
+
+<h2 id="tools">10. Tools: carat, ring size, metal weight</h2>
+<h3 id="carat">Size → carat</h3>
+{{ shot('carat', lang, shots, cls='side-shot') }}
+<p>Estimates a stone’s weight from its dimensions using empirical formulas (error about ±5–10 %), for a well-proportioned stone with a medium girdle.</p>
+<ol class="how">
+  <li>Choose the <span class="ui">Material</span>: diamond, or a colored stone by its density (pick the stone and its SG is filled in).</li>
+  <li>Choose the shape or cut and enter length, width and total depth. Square shapes of colored stones can also use the diagonal.</li>
+  <li>Optionally choose girdle, pavilion bulge and outline corrections. The result is shown in carats.</li>
+</ol>
+<p>The 3D view shows the stone next to a 1 euro cent coin (Ø 16.25 mm) for scale.</p>
+<div class="clear"></div>
+<h3 id="ring-size">Ring size</h3>
+{{ shot('rings', lang, shots, cls='side-shot') }}
+<p>Choose what you enter (EU / ISO circumference, Russian size, inner diameter in mm, US or UK letter) and type the value. You get the size in every system plus the inner circumference and diameter, and a full EU 44–72 table. Sizes from different manufacturers can differ by about half a size, so check a custom piece against a ring gauge. The 3D ring uses your shank width, thickness and profile.</p>
+<div class="clear"></div>
+<h3 id="metal-weight">Metal weight</h3>
+<p>Weight = volume × density. Choose the metal (sterling silver 925, fine silver 999, gold 585 and 750, platinum 950, copper, brass) and what to calculate:</p>
+<ul>
+  <li><strong>Wire / rod / strip / tube</strong> with a round or other cross-section;</li>
+  <li><strong>Sheet / plate</strong>;</li>
+  <li><strong>Ring blank (shank)</strong> from the inner diameter, width and thickness.</li>
+</ul>
+<p>Enter a length to get the weight, or a mass to get the length you can make from it. Alloy densities are typical values; check with your supplier.</p>
+
+<h2 id="my-pieces">11. My pieces and favorites</h2>
+<p>In any calculator tap <span class="ui">Save to “My pieces”</span>. Saved calculations appear in <span class="ui">My pieces</span> with a 3D thumbnail; you can <span class="ui">Open</span>, <span class="ui">Duplicate</span> or <span class="ui">Delete</span> them.</p>
+<p><span class="ui">Export JSON</span> saves all your pieces to a file, as a backup or to move them to another device; <span class="ui">Import JSON</span> loads them back.</p>
+<p>Tap the ☆ star on any card to add it to <span class="ui">Favorites</span>.</p>
+
+<h2 id="about">12. Sources, About and appearance</h2>
+<p><span class="ui">Sources</span> lists all 77 sources the data come from, such as GIA articles, standards, supplier catalogs and encyclopedia articles, and each card links to the ones it uses.</p>
+<p><span class="ui">About</span> shows the app and content versions and holds the settings: the <span class="ui">Theme</span> (System, Dark or Light) and the actual-size scale with card calibration.</p>
+
+<h2 id="language">13. Language</h2>
+<p>The app is in English and Russian and follows your device language. To switch only this app, open iOS <strong>Settings → Jeweler’s Handbook → Language</strong>. Search works in both languages either way.</p>
+
+<h2 id="privacy-data">14. Your data and offline use</h2>
+<p>All catalogs, calculators and 3D models are built into the app, so it works without an internet connection. Your pieces, favorites and settings are stored only on your device. The app has no accounts, ads, analytics or tracking. See the <a href="{{ rel('/privacy') }}">Privacy Policy</a>.</p>
+
+<h2 id="faq">15. FAQ</h2>
+{% for item in faq %}
+<details class="faq" id="{{ item.id }}">
+<summary>{{ item.q|safe }}</summary>
+{{ item.a|safe }}
+</details>
+{% endfor %}
+
+<h2 id="help">16. Still need help?</h2>
+<p>Email <a href="mailto:dreamcomenull@gmail.com">dreamcomenull@gmail.com</a> with your device model, iOS version, the app version and what happened. A screenshot helps a lot. You can also visit the <a href="{{ rel('/support') }}">support page</a>.</p>
+</article>
+</div>
+</div>

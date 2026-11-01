@@ -1,0 +1,107 @@
+{% from 'macros.html' import shot, badges %}
+<section class="hero">
+  <div class="wrap hero-grid">
+    <div>
+      <p class="eyebrow">Для iPhone и iPad</p>
+      <h1>Справочник и калькуляторы ювелира в кармане</h1>
+      <p class="lead"><strong>«Справочник ювелира»</strong> объединяет цепи, камни, огранки, закрепки и замки с практичными калькуляторами. Посчитайте кольца, проволоку и вес цепи, посмотрите её в 3D в реальном размере, проверьте твёрдость и облагораживание камня, оцените караты или переведите размер кольца прямо за верстаком и без интернета.</p>
+      <ul class="pills" aria-label="Коротко">
+        <li>Работает полностью офлайн</li>
+        <li>3D в реальном размере</li>
+        <li>Без регистрации</li>
+        <li>Данные не собираются</li>
+      </ul>
+      <div class="btns">
+        <a class="btn primary" href="{{ rel('/ru/manual/') }}">Читать руководство</a>
+        <a class="btn" href="#features">Возможности</a>
+      </div>
+      {{ badges(stores, t) }}
+    </div>
+    <div class="hero-shots">
+      {{ shot('princess', lang, shots, eager=True, caption=False) }}
+      {{ shot('byz', lang, shots, eager=True, caption=False) }}
+    </div>
+  </div>
+  <div class="wrap">
+    <div class="helpbar" id="help">
+      <strong>Нужна помощь с приложением?</strong>
+      <span>Напишите разработчику: <a href="mailto:dreamcomenull@gmail.com">dreamcomenull@gmail.com</a></span>
+      <a href="{{ rel('/ru/support') }}">Поддержка и вопросы</a>
+      <a href="{{ rel('/ru/manual/') }}">Руководство</a>
+    </div>
+  </div>
+</section>
+
+<div class="wrap">
+<section class="section narrow" aria-labelledby="about">
+  <h2 id="about">Что такое «Справочник ювелира»?</h2>
+  <p>Это офлайн-справочник и набор калькуляторов, который сделал практикующий мастер-цепочник для ювелиров, студентов и любителей. Он отвечает на повседневные вопросы у верстака: сколько колец и проволоки нужно на византийскую цепь, сколько будет весить лист или заготовка кольца, какая закрепка подойдёт хрупкому камню, какой размер US или UK соответствует 17-му размеру.</p>
+  <p>Каждое число взято из названного источника: статьи GIA, каталоги поставщиков, стандарты, и приложение перечисляет их все. Если надёжного источника нет, поле остаётся пустым, а не заполняется догадкой. Расчёты веса, каратов и размеров явно помечены как оценки.</p>
+</section>
+
+<ul class="stats" aria-label="Что внутри">
+  <li><b>8</b><span>калькуляторов цепей</span></li>
+  <li><b>32</b><span>камня</span></li>
+  <li><b>15</b><span>огранок в 3D</span></li>
+  <li><b>13</b><span>типов закрепок</span></li>
+  <li><b>14</b><span>типов замков в 3D</span></li>
+  <li><b>77</b><span>источников</span></li>
+</ul>
+
+<section class="section" aria-labelledby="how">
+  <h2 id="how">Как это работает</h2>
+  <ol class="steps">
+    <li><strong>Найдите.</strong> Откройте раздел на главном экране или введите запрос в <span class="ui">Поиск по справочнику</span>. Поиск понимает русские и английские названия.</li>
+    <li><strong>Введите размеры.</strong> Выберите металл и введите размеры проволоки, кольца или камня. Результаты пересчитываются сразу, а если цепь не соберётся, появится предупреждение.</li>
+    <li><strong>Проверьте 1:1.</strong> Нажмите <span class="ui">Реальный размер</span>, чтобы увидеть модель на экране в натуральную величину, и сохраните расчёт в <span class="ui">Мои изделия</span>.</li>
+  </ol>
+</section>
+
+<section class="section" id="features" aria-labelledby="features-h">
+  <h2 id="features-h">Возможности</h2>
+  <ul class="cards">
+    <li class="card"><span class="ico" aria-hidden="true">⛓</span><h3>Калькуляторы цепей</h3><p>Византийская, якорная и московский бит: количество колец или звеньев, длина проволоки и вес цепи по вашим размерам, с проверкой, соберётся ли плетение. Результат уточняется по пробному отрезку.</p><a class="more" href="{{ rel('/ru/manual/') }}#chains">Как работают калькуляторы</a></li>
+    <li class="card"><span class="ico" aria-hidden="true">⚖</span><h3>Приблизительный вес цепей</h3><p>Бисмарк, верёвочная, панцирная, фигаро 3/1 и коробчатая: вес на сантиметр по таблицам поставщиков, с пометкой «приблизительно».</p><a class="more" href="{{ rel('/ru/manual/') }}#chains">О приблизительных цепях</a></li>
+    <li class="card"><span class="ico" aria-hidden="true">◈</span><h3>3D в реальном размере</h3><p>Вращайте и масштабируйте цепи, огранки, закрепки, замки и кольца в 3D. <span class="ui">Реальный размер</span> показывает их 1:1, масштаб на известных iPhone и iPad подбирается автоматически.</p><a class="more" href="{{ rel('/ru/manual/') }}#actual-size">Реальный размер и калибровка</a></li>
+    <li class="card"><span class="ico" aria-hidden="true">💎</span><h3>32 камня</h3><p>Группа, твёрдость по Моосу, показатель преломления, плотность, цвета, вязкость (GIA 1987), распространённое облагораживание, ультразвуковая чистка и уход, с источниками.</p><a class="more" href="{{ rel('/ru/manual/') }}#stones">Карточки камней</a></li>
+    <li class="card"><span class="ico" aria-hidden="true">◇</span><h3>15 огранок</h3><p>От круглой бриллиантовой и принцессы до розы и кабошона: форма, грани, типичные пропорции и уязвимые места, у каждой есть 3D-модель.</p><a class="more" href="{{ rel('/ru/manual/') }}#cuts">Карточки огранок</a></li>
+    <li class="card"><span class="ico" aria-hidden="true">💍</span><h3>Закрепки и подбор</h3><p>13 типов закрепок, от крапанов и глухой до паве и натяжной. Подбор по камню и огранке показывает, какие закрепки рекомендуются, а какие нет.</p><a class="more" href="{{ rel('/ru/manual/') }}#settings">Подбор закрепки</a></li>
+    <li class="card"><span class="ico" aria-hidden="true">🔒</span><h3>14 типов замков</h3><p>Лобстер, пружинное кольцо, коробочный, тоггл и другие: 3D-схемы, которые открываются и закрываются, плюсы и минусы, подбор замка по нужным свойствам.</p><a class="more" href="{{ rel('/ru/manual/') }}#clasps">Замки</a></li>
+    <li class="card"><span class="ico" aria-hidden="true">📏</span><h3>Инструменты</h3><p><span class="ui">Размер → карат</span> оценивает вес камня по размерам, <span class="ui">Размер кольца</span> переводит EU, RU, US и UK, <span class="ui">Вес металла</span> считает проволоку, лист и заготовки колец.</p><a class="more" href="{{ rel('/ru/manual/') }}#tools">Инструменты</a></li>
+    <li class="card"><span class="ico" aria-hidden="true">★</span><h3>Мои изделия и избранное</h3><p>Сохраняйте любой расчёт с 3D-миниатюрой, дублируйте его или экспортируйте в файл. Отмечайте звёздочкой то, чем пользуетесь чаще всего.</p><a class="more" href="{{ rel('/ru/manual/') }}#my-pieces">Мои изделия</a></li>
+  </ul>
+</section>
+
+<section class="section" aria-labelledby="shots">
+  <h2 id="shots">Скриншоты</h2>
+  <div class="gallery" tabindex="0" aria-label="Скриншоты, листайте вбок">
+    {% for n in shots %}{{ shot(n, lang, shots) }}
+    {% endfor %}
+  </div>
+</section>
+
+<section class="band narrow" aria-labelledby="private">
+  <h2 id="private">Приватно и офлайн</h2>
+  <ul class="checks">
+    <li>Работает полностью офлайн. Все каталоги, калькуляторы и 3D-модели встроены в приложение.</li>
+    <li>Без учётной записи, регистрации и входа. Без рекламы, аналитики и отслеживания.</li>
+    <li>Ваши изделия, избранное и настройки остаются на устройстве.</li>
+  </ul>
+  <p>Подробнее в <a href="{{ rel('/ru/privacy') }}">Политике конфиденциальности</a>.</p>
+</section>
+
+<section class="section narrow" aria-labelledby="good">
+  <h2 id="good">Полезно знать</h2>
+  <p><strong>Языки.</strong> Приложение работает на русском и английском и следует языку устройства.</p>
+  <p class="note"><strong>Расчёты — это оценки.</strong> Вес, караты и размеры зависят от сплава, допусков и отделки. Перед изготовлением всегда проверяйте по пробному отрезку, на весах и калибре.</p>
+</section>
+
+<section class="contact" id="support" aria-labelledby="support-h">
+  <h2 id="support-h">Поддержка и связь</h2>
+  <p>Нашли ошибку, есть вопрос или идея? Напишите мне, разработчику, на <a href="mailto:dreamcomenull@gmail.com">dreamcomenull@gmail.com</a>. Я отвечаю на каждое письмо, как только появляется возможность. Укажите модель устройства, версию iOS и что произошло; скриншот очень поможет.</p>
+  <div class="btns">
+    <a class="btn" href="{{ rel('/ru/support') }}">Поддержка и вопросы</a>
+    <a class="btn" href="{{ rel('/ru/manual/') }}">Руководство</a>
+  </div>
+</section>
+</div>

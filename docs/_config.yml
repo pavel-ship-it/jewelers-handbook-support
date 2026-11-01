@@ -1,9 +1,0 @@
-title: Jewelers Handbook
-description: Privacy policy and support for the Jewelers Handbook iOS app
-theme: jekyll-theme-minimal
-lang: en
-url: https://pavel-ship-it.github.io
-baseurl: /jewelers-handbook-support
-plugins:
-  - jekyll-seo-tag
-  - jekyll-sitemap

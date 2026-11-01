@@ -1,0 +1,16 @@
+{% macro shot(name, lang, shots, cls='shot', eager=False, caption=True) -%}
+{%- set alt, cap = shots[name] -%}
+<figure class="{{ cls }}">
+<img src="{{ rel('/assets/img/' ~ lang ~ '-' ~ name ~ '-360.webp') }}" srcset="{{ rel('/assets/img/' ~ lang ~ '-' ~ name ~ '-360.webp') }} 360w, {{ rel('/assets/img/' ~ lang ~ '-' ~ name ~ '-720.webp') }} 720w" sizes="(max-width: 600px) 70vw, 300px" width="360" height="779" alt="{{ alt }}"{% if not eager %} loading="lazy" decoding="async"{% else %} fetchpriority="high"{% endif %}>
+{%- if caption %}<figcaption>{{ cap }}</figcaption>{% endif %}
+</figure>
+{%- endmacro %}
+{% macro badges(stores, t) -%}
+<!-- STORE-BADGES:START  (store link comes from site/config.json "stores.app_store"; empty = not public yet) -->
+{%- if stores.app_store %}
+<div class="store-links"><a class="store-btn" href="{{ stores.app_store }}" rel="noopener"><span class="store-small">{{ t.badge_apple_small }}</span><span class="store-big">App Store</span></a></div>
+{%- else %}
+<div class="store-links"><span class="store-btn soon-badge" aria-label="{{ t.soon_apple }}"><span class="store-small">{{ t.soon_apple.rsplit(' ', 2)[0] }}</span><span class="store-big">App Store</span></span></div>
+{%- endif %}
+<!-- STORE-BADGES:END -->
+{%- endmacro %}

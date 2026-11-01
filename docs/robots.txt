@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://pavel-ship-it.github.io/jewelers-handbook-support/sitemap.xml

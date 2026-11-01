@@ -1,0 +1,10 @@
+{
+  "base_url": "https://pavel-ship-it.github.io",
+  "base_path": "/jewelers-handbook-support",
+  "lastmod": "2026-11-01",
+  "app_version": "1.7.18",
+  "stores": {
+    "app_store": null
+  },
+  "_stores_note": "Jewelers Handbook (com.py.JewelersHandbook) is not on the App Store yet. When its page is live, set stores.app_store to https://apps.apple.com/app/id<APP_ID> and run: python3 site/build.py"
+}
