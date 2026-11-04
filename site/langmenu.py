@@ -1,12 +1,16 @@
 """Flag language switcher: <details>/<summary> popup (works without JS; JS adds Esc, arrows, click-outside)."""
 FLAGS = {
-    'en': ('<svg class="lsw-flag" viewBox="0 0 60 30" aria-hidden="true" focusable="false">'
+    # English: split flag, left half Irish tricolour, right half Union Jack (centre crop), 3:2 like the Russian flag
+    'en': ('<svg class="lsw-flag" viewBox="0 0 60 40" aria-hidden="true" focusable="false">'
+           '<path fill="#169B62" d="M0 0h10v40H0z"/><path fill="#fff" d="M10 0h10v40H10z"/><path fill="#FF883E" d="M20 0h10v40H20z"/>'
+           '<svg x="30" y="0" width="30" height="40" viewBox="0 0 60 30" preserveAspectRatio="xMidYMid slice">'
            '<clipPath id="lswuk{n}"><path d="M30,15h30v15zv15h-30zh-30v-15zv-15h30z"/></clipPath>'
            '<path d="M0,0v30h60v-30z" fill="#012169"/>'
            '<path d="M0,0 60,30M60,0 0,30" stroke="#fff" stroke-width="6"/>'
            '<path d="M0,0 60,30M60,0 0,30" clip-path="url(#lswuk{n})" stroke="#C8102E" stroke-width="4"/>'
            '<path d="M30,0v30M0,15h60" stroke="#fff" stroke-width="10"/>'
-           '<path d="M30,0v30M0,15h60" stroke="#C8102E" stroke-width="6"/></svg>'),
+           '<path d="M30,0v30M0,15h60" stroke="#C8102E" stroke-width="6"/></svg>'
+           '<path d="M30 0v40" stroke="rgba(0,0,0,.25)" stroke-width=".8"/></svg>'),
     'ru': ('<svg class="lsw-flag" viewBox="0 0 9 6" aria-hidden="true" focusable="false">'
            '<path fill="#fff" d="M0 0h9v2H0z"/><path fill="#0039A6" d="M0 2h9v2H0z"/><path fill="#D52B1E" d="M0 4h9v2H0z"/></svg>'),
 }
