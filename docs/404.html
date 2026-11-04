@@ -32,7 +32,7 @@
 <link rel="icon" href="/jewelers-handbook-support/favicon.ico" sizes="any">
 <link rel="icon" href="/jewelers-handbook-support/favicon.png" type="image/png">
 <link rel="apple-touch-icon" href="/jewelers-handbook-support/apple-touch-icon.png">
-<link rel="stylesheet" href="/jewelers-handbook-support/assets/site.css?v=4e133df6">
+<link rel="stylesheet" href="/jewelers-handbook-support/assets/site.css?v=81d34f1f">
 </head>
 <body class="page-404">
 <a class="skip" href="#main">Skip to content</a>
@@ -43,7 +43,7 @@
       <a href="/jewelers-handbook-support/#features">Features</a>
       <a href="/jewelers-handbook-support/manual/">Manual</a>
       <a href="/jewelers-handbook-support/support">Support</a>
-      <a class="lang" href="/jewelers-handbook-support/ru/" hreflang="ru" lang="ru" data-lang="ru">Русский</a>
+      <details class="lsw"><summary aria-haspopup="true" aria-label="Language: English" title="Language"><svg class="lsw-flag" viewBox="0 0 60 30" aria-hidden="true" focusable="false"><clipPath id="lswuk11s"><path d="M30,15h30v15zv15h-30zh-30v-15zv-15h30z"/></clipPath><path d="M0,0v30h60v-30z" fill="#012169"/><path d="M0,0 60,30M60,0 0,30" stroke="#fff" stroke-width="6"/><path d="M0,0 60,30M60,0 0,30" clip-path="url(#lswuk11s)" stroke="#C8102E" stroke-width="4"/><path d="M30,0v30M0,15h60" stroke="#fff" stroke-width="10"/><path d="M30,0v30M0,15h60" stroke="#C8102E" stroke-width="6"/></svg><span class="lsw-code">EN</span><svg class="lsw-caret" viewBox="0 0 10 6" aria-hidden="true" focusable="false"><path d="M1 1l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></summary><ul class="lsw-menu"><li><a href="/jewelers-handbook-support/" hreflang="en" lang="en" data-lang="en" aria-current="true"><svg class="lsw-flag" viewBox="0 0 60 30" aria-hidden="true" focusable="false"><clipPath id="lswuk11en"><path d="M30,15h30v15zv15h-30zh-30v-15zv-15h30z"/></clipPath><path d="M0,0v30h60v-30z" fill="#012169"/><path d="M0,0 60,30M60,0 0,30" stroke="#fff" stroke-width="6"/><path d="M0,0 60,30M60,0 0,30" clip-path="url(#lswuk11en)" stroke="#C8102E" stroke-width="4"/><path d="M30,0v30M0,15h60" stroke="#fff" stroke-width="10"/><path d="M30,0v30M0,15h60" stroke="#C8102E" stroke-width="6"/></svg><span>English</span><svg class="lsw-check" viewBox="0 0 12 10" aria-hidden="true" focusable="false"><path d="M1 5l3.5 3.5L11 1" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a></li><li><a href="/jewelers-handbook-support/ru/" hreflang="ru" lang="ru" data-lang="ru"><svg class="lsw-flag" viewBox="0 0 9 6" aria-hidden="true" focusable="false"><path fill="#fff" d="M0 0h9v2H0z"/><path fill="#0039A6" d="M0 2h9v2H0z"/><path fill="#D52B1E" d="M0 4h9v2H0z"/></svg><span>Русский</span></a></li></ul></details>
     </nav>
   </div>
 </header>
@@ -78,5 +78,15 @@
 <script>
 (function(){try{document.querySelectorAll('[data-lang]').forEach(function(a){a.addEventListener('click',function(){localStorage.setItem('jh_lang',a.getAttribute('data-lang'))})})}catch(e){}})();
 </script>
+<script>(function(){try{var ds=[].slice.call(document.querySelectorAll('details.lsw'));if(!ds.length)return;
+ds.forEach(function(d){var s=d.querySelector('summary'),ls=[].slice.call(d.querySelectorAll('.lsw-menu a')),k=d.getAttribute('data-lsw-key');
+function sync(){s.setAttribute('aria-expanded',d.open?'true':'false')}sync();d.addEventListener('toggle',sync);
+d.addEventListener('keydown',function(e){var i=ls.indexOf(document.activeElement);
+if(e.key==='Escape'||e.key==='Esc'){if(d.open){d.open=false;sync();s.focus();e.preventDefault()}}
+else if(e.key==='ArrowDown'||e.key==='ArrowUp'){e.preventDefault();if(!d.open){d.open=true;sync()}var n=i<0?(e.key==='ArrowDown'?0:ls.length-1):(i+(e.key==='ArrowDown'?1:-1)+ls.length)%ls.length;ls[n].focus()}
+else if((e.key==='Home'||e.key==='End')&&i>=0){e.preventDefault();ls[e.key==='Home'?0:ls.length-1].focus()}});
+d.addEventListener('focusout',function(e){if(d.open&&e.relatedTarget&&!d.contains(e.relatedTarget)){d.open=false;sync()}});
+if(k)ls.forEach(function(a){a.addEventListener('click',function(){try{localStorage.setItem(k,a.getAttribute('data-lang'))}catch(x){}})})});
+document.addEventListener('click',function(e){ds.forEach(function(d){if(d.open&&!d.contains(e.target)){d.open=false;d.querySelector('summary').setAttribute('aria-expanded','false')}})})}catch(x){}})();</script>
 </body>
 </html>
