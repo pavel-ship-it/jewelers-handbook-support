@@ -108,7 +108,7 @@
 </script>
 <script>(function(){try{var ds=[].slice.call(document.querySelectorAll('details.lsw'));if(!ds.length)return;
 ds.forEach(function(d){var s=d.querySelector('summary'),ls=[].slice.call(d.querySelectorAll('.lsw-menu a')),k=d.getAttribute('data-lsw-key');
-function sync(){s.setAttribute('aria-expanded',d.open?'true':'false')}sync();d.addEventListener('toggle',sync);
+var m=d.querySelector('.lsw-menu');function sync(){s.setAttribute('aria-expanded',d.open?'true':'false');if(d.open&&m){m.style.left='';m.style.right='';var r=m.getBoundingClientRect();if(r.left<8){m.style.right='auto';m.style.left='0'}}}sync();d.addEventListener('toggle',sync);
 d.addEventListener('keydown',function(e){var i=ls.indexOf(document.activeElement);
 if(e.key==='Escape'||e.key==='Esc'){if(d.open){d.open=false;sync();s.focus();e.preventDefault()}}
 else if(e.key==='ArrowDown'||e.key==='ArrowUp'){e.preventDefault();if(!d.open){d.open=true;sync()}var n=i<0?(e.key==='ArrowDown'?0:ls.length-1):(i+(e.key==='ArrowDown'?1:-1)+ls.length)%ls.length;ls[n].focus()}
