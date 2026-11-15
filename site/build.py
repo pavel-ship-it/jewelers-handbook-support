@@ -278,5 +278,27 @@ def home_ld(lang, page):
     return {'@context': 'https://schema.org', '@graph': [site, app]}
 
 
+# --- Security: per-page meta CSP (GitHub Pages cannot set headers). Inline <script> blocks are allowed by
+# their sha256 hash, so editing a script just needs a rebuild. JSON-LD data blocks are not executed and need no hash.
+# frame-ancestors is not supported in <meta> CSP, so it is intentionally absent.
+def add_csp(out_dir):
+    import base64, glob as _glob, hashlib, re as _re
+    for path in _glob.glob(os.path.join(out_dir, '**', '*.html'), recursive=True):
+        s = open(path, encoding='utf-8').read()
+        if 'http-equiv="Content-Security-Policy"' in s:
+            continue
+        hashes = sorted({"'sha256-" + base64.b64encode(hashlib.sha256(m.group(1).encode('utf-8')).digest()).decode() + "'"
+                         for m in _re.finditer(r'<script>(.*?)</script>', s, _re.S)})
+        csp = ("default-src 'none'; script-src 'self' " + ' '.join(hashes) + "; style-src 'self'; img-src 'self'; "
+               "font-src 'self'; connect-src 'self'; manifest-src 'self'; base-uri 'none'; form-action 'none'; "
+               "upgrade-insecure-requests")
+        meta = ('\n<meta http-equiv="Content-Security-Policy" content="' + csp + '">'
+                '\n<meta name="referrer" content="no-referrer">')
+        assert '<meta charset="utf-8">' in s, path
+        s = s.replace('<meta charset="utf-8">', '<meta charset="utf-8">' + meta, 1)
+        open(path, 'w', encoding='utf-8').write(s)
+
+
 if __name__ == '__main__':
     main()
+    add_csp(OUT)
