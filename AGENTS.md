@@ -10,16 +10,16 @@ Rules for AI agents (Grok Bot, Cursor and other coding agents) working in this r
 - Before changing anything, post a plan:
   - the requirements as you understand them;
   - the files you will change;
-  - risks and what could break, checked against `docs/FEATURES.md`;
+  - risks and what could break, checked against `FEATURES.md`;
   - the tests you will add or change.
 - Do not write code until Pavel explicitly approves the plan («делай», «реализуй» or similar). A request to analyse, review, estimate or propose is not approval to implement.
-- If the requirements are ambiguous or contradict `docs/FEATURES.md`, ask. Do not guess.
+- If the requirements are ambiguous or contradict `FEATURES.md`, ask. Do not guess.
 
 ## 2. Don't lose features
 
-- `docs/FEATURES.md` is the source of truth for what this repository does, plus a "Planned changes" section. (If it is not in your checkout yet, it is coming in a separate PR; say so in your plan.)
-- Before opening a PR, go through every feature in `docs/FEATURES.md` and confirm that none was removed or changed by accident.
-- Add new features to `docs/FEATURES.md` in the same PR. When you implement an item from "Planned changes", move it to the implemented list.
+- `FEATURES.md` is the source of truth for what this repository does, plus a "Planned changes" section. (If it is not in your checkout yet, it is coming in a separate PR; say so in your plan.)
+- Before opening a PR, go through every feature in `FEATURES.md` and confirm that none was removed or changed by accident.
+- Add new features to `FEATURES.md` in the same PR. When you implement an item from "Planned changes", move it to the implemented list.
 
 ## 3. Small PRs, one concern each
 
@@ -61,7 +61,8 @@ Static support site for Jeweler's Handbook: home, manual, support, FAQ, privacy,
 | `site/assets/site.css` | styles |
 | `site/config.json` | base URL, App Store link (`null` until the app is published), last-modified date |
 | `site/shots/` | app screenshots used by `site/make_images.py` |
-| `docs/` | generated site. Do not edit by hand. |
+| `docs/` | generated GitHub Pages output, rewritten by `site/build.py`. Never edit by hand. |
+| `FEATURES.md` | feature list and planned changes (repository root, not `docs/`) |
 
 ### Commands
 
@@ -77,5 +78,6 @@ python3 -m venv .venv && .venv/bin/pip install jinja2 markdown pillow
 ### Conventions
 
 - Language rule for public sites: English is the primary language. Russian is selected automatically from the browser locale, and there is a manual language switcher that shows a flag. English pages contain no Russian (only the switcher label). This site already works that way: English at the root, Russian under `/ru/`, flag switcher from `site/langmenu.py`, and Russian-locale browsers are redirected unless the visitor picked a language.
-- Always rebuild and commit `docs/` together with the `site/` change. Merging to `main` publishes the site, so it needs Pavel's word.
+- Never hand-edit `docs/`. It is the generated GitHub Pages output, and `site/build.py` deletes and rewrites it. Edit `site/`, rebuild, and commit `docs/` together with the `site/` change. `FEATURES.md` is at the repository root for the same reason.
+- Merging to `main` publishes the site, so it needs Pavel's word.
 - Canonical URLs have no `.html` suffix (`/privacy`); `/privacy.html` must keep working.
