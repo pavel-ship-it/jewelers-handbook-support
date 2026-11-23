@@ -37,11 +37,13 @@ This file describes the static mini-site at https://pavel-ship-it.github.io/jewe
    - Pavel asked on 2026-11-08 for settings and saved projects to sync through iCloud, with the privacy policy, website text and in-app info updated to match.
    - Status: planned, not started; do not execute until Pavel asks.
    - The site currently says data stays only on the device: the privacy page, the support FAQ and the manual's "Your data and offline use" section.
-2. **Clasps («Замки») on the site.**
-   - On 2026-11-01 Pavel asked to hide the clasp sections from the release and the site for now. The app did this in commit `b466061`.
-   - Status: **not done here.** The home page, manual (section 9 with the lobster screenshot), support page and terms still describe 14 clasp types.
-   - Needs Pavel to confirm whether «с сайта» covers this support site. Do not change it without that.
+2. **Remove clasps («Замки») from the site by the app's public release.**
+   - The app hides «Замки» in release (app commit `b466061`). The site's home page, manual (section 9 with the lobster screenshot), support page and terms still describe 14 clasp types.
+   - Pavel decided (via Delvi, 2026-11-23): while the app is unpublished the mismatch is fine, so leave the site unchanged until then. The clasp content must come off the site by the public release.
+   - Status: **planned, do before release.**
 3. **Privacy and support URLs** for the App Store listing: handled by Pavel with Delvi.
+
+**Standing rule (Pavel, 2026-11-23):** after the app is published, the site always mirrors the current app version. Anything hidden or removed in the released app comes off the site as well.
 
 ## 3. Features without tests
 Every feature in section 1 except #3 and #10 (the build's English-page check) has no automated test: rows 1, 2, 4–9 and 11–15.
